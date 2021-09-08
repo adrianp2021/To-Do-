@@ -39,7 +39,7 @@ function addToDo(event) {
   //append to todo-list
   toDoList.appendChild(toDoDiv)
 
-  //clear todo inout value
+  //clear todo input value
   toDoInput.value = ''
 }
 
@@ -69,19 +69,30 @@ function deleteCheck(e) {
 }
 
 function filterToDo(e) {
+  console.log(e)
   const todos = toDoList.childNodes
-  // console.log(todos)
-  todos.forEach(function (todo) {
-    switch (e.target.value) {
-      case 'all':
-        todo.style.display = 'flex'
-        break
-      case 'completed':
-        if (todo.classList.contains('completed')) {
-          todo.style.display = 'flex'
-        } else {
-          todo.style.display = 'none'
-        }
-    }
+  console.log(todos)
+  
+  // // console.log(todos)
+  todos.forEach(function () {
+    // if (e.target.value === 'all'){
+    //   todo.style.display = 'flex'
+    // console.log(todo)
+    // }
+  
+    // switch (e.target.value) {
+    //   case 'all':
+    //     todo.style.display = 'flex'
+    //     break
+    //   case 'completed':
+    //     if (todo.classList.contains('completed')) {
+    //       todo.style.display = 'flex'
+    //     } else {
+    //       todo.style.display = 'none'
+    //     }
+    // }
+    // console.log(e.target.value)
   })
+
 }
+
