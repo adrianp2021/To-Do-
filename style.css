@@ -79,7 +79,13 @@ form button:hover{
 .complete-btn{
   background: rgb(73, 204, 73);
 }
+.complete-btn:hover{
+  background: #3c7920;
+}
 
+.trash-btn:hover{
+  background: #bb5133;
+}
 /* See this selector */
 /* .todo-item{
   padding: 0rem, 0.5rem;
@@ -92,7 +98,7 @@ form button:hover{
 
 .completed{ 
   text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .fall{
@@ -100,11 +106,11 @@ form button:hover{
   opacity:0;
 }
 
-/* select{
+select{
   appearance: none;
   outline: none;
   border: none;
-} */
+}
 
 .select{
   margin:1rem;
