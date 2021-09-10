@@ -1,17 +1,17 @@
-// Selectors
+// ! SELECTORS
 const toDoInput = document.querySelector('.todo-input')
 const toDoButton = document.querySelector('.todo-button')
 const toDoList = document.querySelector('.todo-list')
 const filterOption = document.querySelector('.filter-todo')
 
-// Event Listeners
+// ! EVENT LISTENERS 
 // if page is loadded, execute function
 document.addEventListener('DOMContentLoaded', getTodos)
 toDoButton.addEventListener('click', addToDo)
 toDoList.addEventListener('click', deleteCheck)
 filterOption.addEventListener('click', filterToDo)
 
-// Functions
+// ! FUNCTIONS
 function addToDo(event) {
   //preventing form from submitting
   event.preventDefault()
@@ -61,31 +61,18 @@ function deleteCheck(e) {
     todo.addEventListener('transitionend', function () {
       todo.remove()
     })
-
   } else {
     (item.classList[0] === 'complete-btn')
     const todo = item.parentElement
     todo.classList.toggle('completed')
   }
-
-  //check mark
-  // if (item.classList[0] === 'complete-btn')
-  // const todo = item.parentElement
-  // todo.classList.toggle('completed')
 }
 
 function filterToDo(e) {
   // console.log(e)
   const todos = toDoList.childNodes
   // console.log(todos)
-
-  // // console.log(todos)
   todos.forEach(function (todo) {
-    // if (e.target.value === 'all'){
-    //   todo.style.display = 'flex'
-    // console.log(todo)
-    // }
-
     switch (e.target.value) {
       case 'all':
         todo.style.display = 'flex'
@@ -118,7 +105,6 @@ function saveLocalTodos(todo) {
   todos.push(todo)
   localStorage.setItem('todos', JSON.stringify(todos))
 }
-
 
 function getTodos() {
   let todos
